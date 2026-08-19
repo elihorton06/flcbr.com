@@ -1,15 +1,34 @@
+/* =========================================================
+   FLETCHER, LOWE & CHENEVERT
+   MAIN STYLESHEET
+   ========================================================= */
+
+
+/* =========================================================
+   COLORS / VARIABLES
+   ========================================================= */
+
 :root {
     --navy: #101820;
     --navy-light: #17242f;
     --blue: #233f5c;
+
     --gold: #b79a64;
     --gold-light: #d2bd92;
+
     --cream: #f2efe8;
     --white: #ffffff;
+
     --text: #17191b;
     --gray: #73777c;
+
     --border: rgba(20, 30, 38, 0.15);
 }
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
 
 * {
     margin: 0;
@@ -43,10 +62,13 @@ button {
 }
 
 
-/* HEADER */
+/* =========================================================
+   MAIN HEADER
+   ========================================================= */
 
 .site-header {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -61,12 +83,12 @@ button {
 
     z-index: 1000;
 
+    color: white;
+
     transition:
         background 0.4s ease,
         height 0.4s ease,
         box-shadow 0.4s ease;
-
-    color: white;
 }
 
 .site-header.scrolled {
@@ -75,27 +97,42 @@ button {
     background: rgba(16, 24, 32, 0.96);
 
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
-    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .logo {
     display: flex;
     align-items: center;
     gap: 16px;
+
+    position: relative;
+
+    z-index: 1001;
 }
 
 .logo-mark {
     font-family: 'Libre Caslon Display', serif;
+
     font-size: 32px;
+
     letter-spacing: -3px;
 }
 
 .logo-text {
     font-size: 13px;
     font-weight: 600;
+
     line-height: 1.1;
+
     text-transform: uppercase;
+
     letter-spacing: 1.6px;
 }
 
@@ -110,9 +147,15 @@ button {
     opacity: 0.75;
 }
 
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
 .desktop-nav {
     display: flex;
     align-items: center;
+
     gap: 36px;
 }
 
@@ -145,9 +188,15 @@ button {
     width: 100%;
 }
 
+
+/* =========================================================
+   HEADER PHONE
+   ========================================================= */
+
 .header-phone {
     display: flex;
     align-items: center;
+
     gap: 10px;
 
     font-size: 14px;
@@ -158,16 +207,26 @@ button {
     color: var(--gold-light);
 }
 
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
 .menu-button {
     display: none;
-
-    background: none;
-    border: 0;
 
     width: 38px;
     height: 38px;
 
+    background: none;
+
+    border: 0;
+
     cursor: pointer;
+
+    position: relative;
+
+    z-index: 1001;
 }
 
 .menu-button span {
@@ -184,7 +243,9 @@ button {
 }
 
 
-/* MOBILE MENU */
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
 .mobile-menu {
     position: fixed;
@@ -239,7 +300,9 @@ button {
 }
 
 
-/* HERO */
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
 
 .hero {
     position: relative;
@@ -256,6 +319,7 @@ button {
 
 .hero-image {
     position: absolute;
+
     inset: 0;
 
     background:
@@ -269,22 +333,25 @@ button {
 }
 
 @keyframes heroZoom {
+
     to {
         transform: scale(1);
     }
+
 }
 
 .hero-overlay {
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
             90deg,
-            rgba(9,16,22,0.92) 0%,
-            rgba(9,16,22,0.72) 38%,
-            rgba(9,16,22,0.28) 72%,
-            rgba(9,16,22,0.12) 100%
+            rgba(9, 16, 22, 0.94) 0%,
+            rgba(9, 16, 22, 0.78) 35%,
+            rgba(9, 16, 22, 0.35) 70%,
+            rgba(9, 16, 22, 0.15) 100%
         );
 }
 
@@ -318,7 +385,12 @@ button {
 .hero-eyebrow {
     display: flex;
     align-items: center;
+
     gap: 15px;
+
+    margin-bottom: 30px;
+
+    color: var(--gold-light);
 
     font-size: 12px;
     font-weight: 600;
@@ -326,10 +398,6 @@ button {
     letter-spacing: 2.4px;
 
     text-transform: uppercase;
-
-    color: var(--gold-light);
-
-    margin-bottom: 30px;
 }
 
 .hero-eyebrow span {
@@ -364,19 +432,26 @@ button {
 
     margin-top: 35px;
 
-    color: rgba(255,255,255,0.75);
+    color: rgba(255, 255, 255, 0.75);
 
     font-size: 17px;
+
     line-height: 1.75;
 }
 
 .hero-actions {
     display: flex;
     align-items: center;
+
     gap: 28px;
 
     margin-top: 42px;
 }
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
 .primary-button {
     min-width: 190px;
@@ -397,25 +472,45 @@ button {
     font-weight: 700;
 
     text-transform: uppercase;
+
     letter-spacing: 1px;
 
     transition:
         background 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .primary-button:hover {
     background: var(--gold-light);
+
     transform: translateY(-3px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .secondary-button {
     font-size: 13px;
 
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
     padding-bottom: 6px;
+
+    transition:
+        border-color 0.3s ease,
+        color 0.3s ease;
 }
+
+.secondary-button:hover {
+    color: var(--gold-light);
+
+    border-color: var(--gold-light);
+}
+
+
+/* =========================================================
+   HERO CONTACT BOX
+   ========================================================= */
 
 .hero-contact-panel {
     position: absolute;
@@ -429,9 +524,10 @@ button {
 
     padding: 30px 38px;
 
-    background: rgba(255,255,255,0.95);
+    background: rgba(255, 255, 255, 0.95);
 
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     color: var(--navy);
 }
@@ -466,19 +562,25 @@ button {
     color: var(--gray);
 }
 
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
 .scroll-indicator {
     position: absolute;
 
     left: 4vw;
     bottom: 45px;
 
-    color: rgba(255,255,255,0.6);
-
     z-index: 4;
 
     display: flex;
     align-items: center;
+
     gap: 12px;
+
+    color: rgba(255, 255, 255, 0.6);
 
     font-size: 10px;
 
@@ -495,7 +597,7 @@ button {
 
     overflow: hidden;
 
-    background: rgba(255,255,255,0.25);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .scroll-line div {
@@ -510,6 +612,7 @@ button {
 }
 
 @keyframes scrollLine {
+
     0% {
         left: -40%;
     }
@@ -517,10 +620,13 @@ button {
     100% {
         left: 110%;
     }
+
 }
 
 
-/* GLOBAL SECTIONS */
+/* =========================================================
+   GLOBAL SECTION LAYOUT
+   ========================================================= */
 
 .section-container {
     width: min(1400px, 88vw);
@@ -531,7 +637,10 @@ button {
 .section-label {
     display: flex;
     align-items: center;
+
     gap: 12px;
+
+    color: var(--blue);
 
     font-size: 11px;
     font-weight: 700;
@@ -539,8 +648,6 @@ button {
     letter-spacing: 2px;
 
     text-transform: uppercase;
-
-    color: var(--blue);
 }
 
 .section-label span {
@@ -548,11 +655,13 @@ button {
 }
 
 .section-label.light {
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 
-/* INTRO */
+/* =========================================================
+   OUR FIRM
+   ========================================================= */
 
 .intro-section {
     padding: 140px 0;
@@ -610,13 +719,15 @@ button {
     color: #5f6469;
 
     font-size: 15px;
+
     line-height: 1.8;
 }
 
 .text-link {
     display: inline-flex;
-    gap: 15px;
     align-items: center;
+
+    gap: 15px;
 
     margin-top: 15px;
 
@@ -637,7 +748,9 @@ button {
 }
 
 
-/* ATTORNEYS */
+/* =========================================================
+   ATTORNEYS HOMEPAGE SECTION
+   ========================================================= */
 
 .attorneys-section {
     padding: 140px 0;
@@ -649,8 +762,8 @@ button {
 
 .section-heading {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-between;
 
     margin-bottom: 70px;
 }
@@ -670,9 +783,9 @@ button {
 .attorney-card {
     position: relative;
 
-    background: var(--navy-light);
-
     overflow: hidden;
+
+    background: var(--navy-light);
 }
 
 .attorney-image {
@@ -681,17 +794,21 @@ button {
     aspect-ratio: 0.86;
 
     overflow: hidden;
+
+    background: #242b31;
 }
 
 .attorney-image img {
+    width: 100%;
     height: 100%;
 
     object-fit: cover;
+    object-position: center top;
 
     filter: grayscale(100%);
 
     transition:
-        transform 0.8s cubic-bezier(.2,.7,.2,1),
+        transform 0.8s cubic-bezier(.2, .7, .2, 1),
         filter 0.6s ease;
 }
 
@@ -703,12 +820,13 @@ button {
 
 .attorney-image-overlay {
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
             to top,
-            rgba(16,24,32,0.55),
+            rgba(16, 24, 32, 0.55),
             transparent 45%
         );
 }
@@ -725,7 +843,7 @@ button {
     right: 28px;
     top: 30px;
 
-    color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.3);
 
     font-size: 11px;
 }
@@ -741,7 +859,7 @@ button {
 .attorney-info p {
     margin-top: 6px;
 
-    color: rgba(255,255,255,0.55);
+    color: rgba(255, 255, 255, 0.55);
 
     font-size: 12px;
 
@@ -753,6 +871,7 @@ button {
 .attorney-info a {
     display: inline-flex;
     align-items: center;
+
     gap: 12px;
 
     margin-top: 24px;
@@ -760,14 +879,25 @@ button {
     color: var(--gold-light);
 
     font-size: 11px;
+    font-weight: 700;
 
     letter-spacing: 1px;
 
     text-transform: uppercase;
 }
 
+.attorney-info a i {
+    transition: transform 0.3s ease;
+}
 
-/* PRACTICE AREAS */
+.attorney-info a:hover i {
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   PRACTICE / SERVICES SECTION
+   ========================================================= */
 
 .practice-section {
     padding: 140px 0;
@@ -795,76 +925,162 @@ button {
     color: var(--gray);
 
     font-size: 16px;
+
     line-height: 1.8;
 }
 
-.practice-list {
-    border-top: 1px solid var(--border);
-}
 
-.practice-item {
-    min-height: 110px;
+/* =========================================================
+   SIX SERVICE CARDS
+   ========================================================= */
 
+.services-grid {
     display: grid;
 
-    grid-template-columns: 80px 1fr 70px;
+    grid-template-columns: repeat(3, 1fr);
 
-    align-items: center;
-
-    border-bottom: 1px solid var(--border);
-
-    transition:
-        background 0.35s ease,
-        padding 0.35s ease;
+    gap: 22px;
 }
 
-.practice-item:hover {
-    padding: 0 25px;
+.service-card {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 42px 35px;
+
+    display: flex;
+    flex-direction: column;
 
     background: var(--cream);
+
+    border: 1px solid rgba(16, 24, 32, 0.10);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
-.practice-number {
-    color: var(--gold);
+.service-card:hover {
+    transform: translateY(-8px);
 
-    font-size: 11px;
+    background: var(--navy);
+
+    color: white;
+
+    box-shadow:
+        0 25px 60px rgba(16, 24, 32, 0.16);
 }
 
-.practice-item h3 {
-    font-family: 'Libre Caslon Display', serif;
+.service-icon {
+    width: 64px;
+    height: 64px;
 
-    font-size: clamp(27px, 3vw, 42px);
-
-    font-weight: 400;
-}
-
-.practice-arrow {
-    width: 50px;
-    height: 50px;
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--border);
+    margin-bottom: 45px;
 
     border-radius: 50%;
 
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
-}
-
-.practice-item:hover .practice-arrow {
     background: var(--navy);
 
     color: white;
 
-    transform: rotate(-35deg);
+    font-size: 23px;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    background: var(--gold);
+
+    color: var(--navy);
+
+    transform: scale(1.08);
+}
+
+.service-number {
+    position: absolute;
+
+    top: 42px;
+    right: 35px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.service-card h3 {
+    margin-bottom: 18px;
+
+    font-family: 'Libre Caslon Display', serif;
+
+    font-size: 31px;
+
+    line-height: 1.1;
+
+    font-weight: 400;
+}
+
+.service-card p {
+    color: #696e73;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    transition: color 0.4s ease;
+}
+
+.service-card:hover p {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.service-card a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: auto;
+
+    padding-top: 28px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.service-card a i {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover a i {
+    transform: translateX(6px);
 }
 
 
-/* STATEMENT */
+/* =========================================================
+   STATEMENT SECTION
+   ========================================================= */
 
 .statement-section {
     position: relative;
@@ -875,19 +1091,23 @@ button {
     align-items: center;
 
     overflow: hidden;
+
+    background: var(--navy);
 }
 
 .statement-background {
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
-            rgba(10,17,24,0.75),
-            rgba(10,17,24,0.75)
+            rgba(10, 17, 24, 0.78),
+            rgba(10, 17, 24, 0.78)
         ),
         url("hero-attorneys.jpg")
-        center / cover no-repeat;
+        center / cover
+        no-repeat;
 
     background-attachment: fixed;
 }
@@ -933,7 +1153,9 @@ button {
 }
 
 
-/* CONTACT */
+/* =========================================================
+   CONTACT SECTION
+   ========================================================= */
 
 .contact-section {
     padding: 140px 0;
@@ -948,9 +1170,9 @@ button {
 
     grid-template-columns: 1fr 0.85fr;
 
-    gap: 100px;
-
     align-items: center;
+
+    gap: 100px;
 }
 
 .contact-copy .section-label {
@@ -962,7 +1184,9 @@ button {
 
     margin-top: 30px;
 
-    color: rgba(255,255,255,0.58);
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 15px;
 
     line-height: 1.8;
 }
@@ -995,6 +1219,8 @@ button {
     font-family: 'Libre Caslon Display', serif;
 
     font-size: clamp(45px, 5vw, 66px);
+
+    line-height: 1;
 }
 
 .contact-divider {
@@ -1007,9 +1233,8 @@ button {
 
 .contact-row {
     display: flex;
-
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     padding: 20px 0;
 
@@ -1029,14 +1254,16 @@ button {
 }
 
 
-/* FOOTER */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer {
+    padding: 70px 6vw 30px;
+
     background: #0a1117;
 
     color: white;
-
-    padding: 70px 6vw 30px;
 }
 
 .footer-main {
@@ -1052,6 +1279,7 @@ footer {
 .footer-logo {
     display: flex;
     align-items: center;
+
     gap: 18px;
 
     font-size: 13px;
@@ -1076,9 +1304,13 @@ footer {
 
     gap: 12px;
 
-    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
 
-    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+}
+
+.footer-links a {
+    transition: color 0.25s ease;
 }
 
 .footer-links a:hover {
@@ -1088,7 +1320,7 @@ footer {
 .footer-contact span {
     display: block;
 
-    color: rgba(255,255,255,0.45);
+    color: rgba(255, 255, 255, 0.45);
 
     font-size: 10px;
 
@@ -1109,14 +1341,13 @@ footer {
 
 .footer-bottom {
     display: flex;
-
     justify-content: space-between;
 
     padding-top: 25px;
 
-    border-top: 1px solid rgba(255,255,255,0.09);
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
 
-    color: rgba(255,255,255,0.35);
+    color: rgba(255, 255, 255, 0.35);
 
     font-size: 10px;
 
@@ -1126,7 +1357,9 @@ footer {
 }
 
 
-/* SCROLL ANIMATIONS */
+/* =========================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================= */
 
 .reveal {
     opacity: 0;
@@ -1134,8 +1367,8 @@ footer {
     transform: translateY(35px);
 
     transition:
-        opacity 0.9s cubic-bezier(.2,.7,.2,1),
-        transform 0.9s cubic-bezier(.2,.7,.2,1);
+        opacity 0.9s cubic-bezier(.2, .7, .2, 1),
+        transform 0.9s cubic-bezier(.2, .7, .2, 1);
 }
 
 .reveal.visible {
@@ -1157,7 +1390,355 @@ footer {
 }
 
 
-/* RESPONSIVE */
+/* =========================================================
+   ATTORNEY PROFILE HEADER
+   ========================================================= */
+
+.profile-header {
+    width: 100%;
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5vw;
+
+    background: var(--navy);
+
+    color: white;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--gold-light);
+
+    transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   ATTORNEY PROFILE PAGE
+   ========================================================= */
+
+.attorney-profile {
+    background: var(--cream);
+}
+
+.profile-hero {
+    min-height: calc(100vh - 88px);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-photo {
+    position: relative;
+
+    min-height: 720px;
+
+    overflow: hidden;
+
+    background: #d9d7d2;
+}
+
+.profile-photo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(16, 24, 32, 0.12),
+            transparent 35%
+        );
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter 1s ease,
+        transform 1.3s cubic-bezier(.2, .7, .2, 1);
+}
+
+.profile-photo:hover img {
+    filter: grayscale(15%);
+
+    transform: scale(1.02);
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 100px 8vw;
+
+    background: var(--cream);
+}
+
+.profile-eyebrow {
+    margin-bottom: 28px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.profile-content h1 {
+    font-family: 'Libre Caslon Display', serif;
+
+    font-size: clamp(65px, 7vw, 110px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 400;
+
+    color: var(--navy);
+}
+
+.profile-content h1 em {
+    color: var(--gold);
+
+    font-style: italic;
+}
+
+.profile-title {
+    margin-top: 24px;
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.profile-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 40px 0;
+
+    background: rgba(16, 24, 32, 0.14);
+}
+
+.profile-bio {
+    max-width: 600px;
+
+    margin-bottom: 18px;
+
+    color: #60656a;
+
+    font-size: 16px;
+
+    line-height: 1.85;
+}
+
+.profile-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    margin-top: 32px;
+}
+
+.profile-email {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding-bottom: 5px;
+
+    color: var(--navy);
+
+    border-bottom: 1px solid rgba(16, 24, 32, 0.3);
+
+    font-size: 13px;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.profile-email:hover {
+    color: var(--gold);
+
+    border-color: var(--gold);
+}
+
+
+/* =========================================================
+   ATTORNEY PROFILE CONTACT SECTION
+   ========================================================= */
+
+.profile-contact-section {
+    padding: 120px 6vw;
+
+    background: var(--navy);
+
+    color: white;
+}
+
+.profile-contact-inner {
+    width: min(1300px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.8fr;
+
+    align-items: center;
+
+    gap: 100px;
+}
+
+.profile-contact-inner > div:first-child > span {
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.profile-contact-inner h2 {
+    margin-top: 25px;
+
+    font-family: 'Libre Caslon Display', serif;
+
+    font-size: clamp(50px, 5vw, 75px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+.profile-contact-inner h2 em {
+    color: var(--gold-light);
+
+    font-style: italic;
+}
+
+.profile-contact-card {
+    padding: 48px;
+
+    background: white;
+
+    color: var(--navy);
+}
+
+.profile-contact-card > span {
+    display: block;
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.profile-contact-card > a:first-of-type {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: 'Libre Caslon Display', serif;
+
+    font-size: clamp(38px, 4vw, 58px);
+
+    line-height: 1;
+}
+
+.profile-contact-card p {
+    margin-top: 25px;
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.contact-profile-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 35px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(16, 24, 32, 0.15);
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.contact-profile-button i {
+    transition: transform 0.3s ease;
+}
+
+.contact-profile-button:hover i {
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media (max-width: 1000px) {
 
@@ -1172,10 +1753,14 @@ footer {
 
     .intro-grid {
         grid-template-columns: 1fr;
+
+        gap: 50px;
     }
 
     .intro-copy {
         grid-template-columns: 1fr;
+
+        gap: 40px;
     }
 
     .attorney-grid {
@@ -1184,18 +1769,63 @@ footer {
 
     .practice-heading {
         grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
+
+        gap: 60px;
     }
 
     .hero-contact-panel {
         display: none;
     }
 
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
+
+/* =========================================================
+   ATTORNEY PROFILE TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .profile-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+        min-height: 600px;
+
+        height: 72vh;
+    }
+
+    .profile-content {
+        padding: 75px 7vw;
+    }
+
+    .profile-contact-inner {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 700px) {
 
@@ -1205,12 +1835,33 @@ footer {
         padding: 0 22px;
     }
 
+    .site-header.scrolled {
+        height: 68px;
+    }
+
     .logo-text {
         display: none;
     }
 
+    .logo-mark {
+        font-size: 30px;
+    }
+
     .hero {
         min-height: 850px;
+    }
+
+    .hero-image {
+        background-position: 60% top;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(9, 16, 22, 0.92),
+                rgba(9, 16, 22, 0.60)
+            );
     }
 
     .hero-content {
@@ -1223,8 +1874,13 @@ footer {
         letter-spacing: -2px;
     }
 
+    .hero-description {
+        font-size: 15px;
+    }
+
     .hero-actions {
         flex-direction: column;
+
         align-items: flex-start;
     }
 
@@ -1243,23 +1899,44 @@ footer {
         width: 88vw;
     }
 
+    .intro-copy h2,
+    .section-heading h2,
+    .practice-heading h2,
+    .contact-copy h2 {
+        font-size: 48px;
+
+        letter-spacing: -1.5px;
+    }
+
     .attorney-grid {
         grid-template-columns: 1fr;
     }
 
     .section-heading {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 35px;
     }
 
-    .practice-item {
-        grid-template-columns: 45px 1fr 45px;
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 
-    .practice-arrow {
-        width: 40px;
-        height: 40px;
+    .service-card {
+        min-height: 340px;
+
+        padding: 36px 28px;
+    }
+
+    .service-number {
+        top: 36px;
+        right: 28px;
+    }
+
+    .service-icon {
+        margin-bottom: 38px;
     }
 
     .statement-section {
@@ -1268,6 +1945,10 @@ footer {
 
     .statement-background {
         background-attachment: scroll;
+    }
+
+    .statement-content h2 {
+        font-size: 43px;
     }
 
     .contact-card {
@@ -1280,6 +1961,8 @@ footer {
 
     .footer-main {
         grid-template-columns: 1fr;
+
+        gap: 40px;
     }
 
     .footer-bottom {
@@ -1290,138 +1973,144 @@ footer {
 
 }
 
-/* SERVICES GRID */
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
+/* =========================================================
+   ATTORNEY PROFILE MOBILE
+   ========================================================= */
 
-.service-card {
-    position: relative;
-    min-height: 390px;
+@media (max-width: 600px) {
 
-    padding: 42px 35px;
+    .profile-header {
+        height: 74px;
 
-    background: var(--cream);
-    border: 1px solid rgba(16, 24, 32, 0.10);
-
-    display: flex;
-    flex-direction: column;
-
-    transition:
-        transform 0.4s ease,
-        background 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    background: var(--navy);
-    color: white;
-
-    box-shadow:
-        0 25px 60px rgba(16, 24, 32, 0.16);
-}
-
-.service-icon {
-    width: 64px;
-    height: 64px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 45px;
-
-    border-radius: 50%;
-
-    background: var(--navy);
-    color: white;
-
-    font-size: 23px;
-
-    transition:
-        background 0.4s ease,
-        color 0.4s ease;
-}
-
-.service-card:hover .service-icon {
-    background: var(--gold);
-    color: var(--navy);
-}
-
-.service-number {
-    position: absolute;
-    top: 42px;
-    right: 35px;
-
-    color: var(--gold);
-
-    font-size: 11px;
-    letter-spacing: 1px;
-}
-
-.service-card h3 {
-    font-family: 'Libre Caslon Display', serif;
-
-    font-size: 31px;
-    font-weight: 400;
-
-    margin-bottom: 18px;
-}
-
-.service-card p {
-    color: #696e73;
-
-    font-size: 14px;
-    line-height: 1.75;
-
-    transition: color 0.4s ease;
-}
-
-.service-card:hover p {
-    color: rgba(255,255,255,0.68);
-}
-
-.service-card a {
-    margin-top: auto;
-    padding-top: 28px;
-
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    color: var(--gold);
-
-    font-size: 11px;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.service-card a i {
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover a i {
-    transform: translateX(6px);
-}
-
-@media (max-width: 1000px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 650px) {
-    .services-grid {
-        grid-template-columns: 1fr;
+        padding: 0 22px;
     }
 
-    .service-card {
-        min-height: 340px;
+    .profile-header .logo-text {
+        display: none;
     }
+
+    .profile-header .logo-mark {
+        font-size: 29px;
+    }
+
+    .back-link {
+        font-size: 10px;
+    }
+
+    .profile-photo {
+        min-height: 480px;
+
+        height: 62vh;
+    }
+
+    .profile-content {
+        padding: 65px 7vw;
+    }
+
+    .profile-content h1 {
+        font-size: 68px;
+
+        letter-spacing: -3px;
+    }
+
+    .profile-divider {
+        margin: 32px 0;
+    }
+
+    .profile-bio {
+        font-size: 15px;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 22px;
+    }
+
+    .profile-contact-section {
+        padding: 80px 6vw;
+    }
+
+    .profile-contact-inner h2 {
+        font-size: 48px;
+    }
+
+    .profile-contact-card {
+        padding: 32px 25px;
+    }
+
+    .profile-contact-card > a:first-of-type {
+        font-size: 38px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .primary-button {
+        width: 100%;
+    }
+
+    .service-card h3 {
+        font-size: 28px;
+    }
+
+    .large-phone {
+        font-size: 34px;
+    }
+
+    .profile-content h1 {
+        font-size: 59px;
+    }
+
+    .profile-contact-card > a:first-of-type {
+        font-size: 33px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+
+        transform: none;
+    }
+
 }
