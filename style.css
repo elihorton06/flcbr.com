@@ -3,25 +3,16 @@
    MAIN STYLESHEET
    ========================================================= */
 
-
-/* =========================================================
-   COLORS / VARIABLES
-   ========================================================= */
-
 :root {
     --navy: #101820;
     --navy-light: #17242f;
     --blue: #233f5c;
-
     --gold: #b79a64;
     --gold-light: #d2bd92;
-
     --cream: #f2efe8;
     --white: #ffffff;
-
     --text: #17191b;
     --gray: #73777c;
-
     --border: rgba(20, 30, 38, 0.15);
 }
 
@@ -68,7 +59,6 @@ button {
 
 .site-header {
     position: fixed;
-
     top: 0;
     left: 0;
 
@@ -113,26 +103,20 @@ button {
     gap: 16px;
 
     position: relative;
-
     z-index: 1001;
 }
 
 .logo-mark {
     font-family: 'Libre Caslon Display', serif;
-
     font-size: 32px;
-
     letter-spacing: -3px;
 }
 
 .logo-text {
     font-size: 13px;
     font-weight: 600;
-
     line-height: 1.1;
-
     text-transform: uppercase;
-
     letter-spacing: 1.6px;
 }
 
@@ -155,7 +139,6 @@ button {
 .desktop-nav {
     display: flex;
     align-items: center;
-
     gap: 36px;
 }
 
@@ -164,7 +147,6 @@ button {
 
     font-size: 13px;
     font-weight: 500;
-
     letter-spacing: 0.5px;
 }
 
@@ -196,7 +178,6 @@ button {
 .header-phone {
     display: flex;
     align-items: center;
-
     gap: 10px;
 
     font-size: 14px;
@@ -219,13 +200,11 @@ button {
     height: 38px;
 
     background: none;
-
     border: 0;
 
     cursor: pointer;
 
     position: relative;
-
     z-index: 1001;
 }
 
@@ -249,7 +228,6 @@ button {
 
 .mobile-menu {
     position: fixed;
-
     inset: 0;
 
     background: var(--navy);
@@ -295,13 +273,12 @@ button {
     color: var(--gold-light) !important;
 
     font-family: 'DM Sans', sans-serif !important;
-
     font-size: 22px !important;
 }
 
 
 /* =========================================================
-   HERO SECTION
+   HERO
    ========================================================= */
 
 .hero {
@@ -319,7 +296,6 @@ button {
 
 .hero-image {
     position: absolute;
-
     inset: 0;
 
     background:
@@ -333,16 +309,13 @@ button {
 }
 
 @keyframes heroZoom {
-
     to {
         transform: scale(1);
     }
-
 }
 
 .hero-overlay {
     position: absolute;
-
     inset: 0;
 
     background:
@@ -385,7 +358,6 @@ button {
 .hero-eyebrow {
     display: flex;
     align-items: center;
-
     gap: 15px;
 
     margin-bottom: 30px;
@@ -423,7 +395,6 @@ button {
 
 .hero h1 em {
     color: var(--gold-light);
-
     font-style: italic;
 }
 
@@ -435,14 +406,12 @@ button {
     color: rgba(255, 255, 255, 0.75);
 
     font-size: 17px;
-
     line-height: 1.75;
 }
 
 .hero-actions {
     display: flex;
     align-items: center;
-
     gap: 28px;
 
     margin-top: 42px;
@@ -459,20 +428,17 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
 
     padding: 18px 22px;
 
     background: var(--gold);
-
     color: var(--navy);
 
     font-size: 13px;
     font-weight: 700;
 
     text-transform: uppercase;
-
     letter-spacing: 1px;
 
     transition:
@@ -503,13 +469,12 @@ button {
 
 .secondary-button:hover {
     color: var(--gold-light);
-
     border-color: var(--gold-light);
 }
 
 
 /* =========================================================
-   HERO CONTACT BOX
+   HERO CONTACT
    ========================================================= */
 
 .hero-contact-panel {
@@ -577,7 +542,6 @@ button {
 
     display: flex;
     align-items: center;
-
     gap: 12px;
 
     color: rgba(255, 255, 255, 0.6);
@@ -585,7 +549,6 @@ button {
     font-size: 10px;
 
     text-transform: uppercase;
-
     letter-spacing: 2px;
 }
 
@@ -612,7 +575,6 @@ button {
 }
 
 @keyframes scrollLine {
-
     0% {
         left: -40%;
     }
@@ -620,24 +582,21 @@ button {
     100% {
         left: 110%;
     }
-
 }
 
 
 /* =========================================================
-   GLOBAL SECTION LAYOUT
+   GLOBAL SECTIONS
    ========================================================= */
 
 .section-container {
     width: min(1400px, 88vw);
-
     margin: auto;
 }
 
 .section-label {
     display: flex;
     align-items: center;
-
     gap: 12px;
 
     color: var(--blue);
@@ -705,7 +664,6 @@ button {
 .practice-heading h2 em,
 .contact-copy h2 em {
     color: var(--gold);
-
     font-style: italic;
 }
 
@@ -719,14 +677,12 @@ button {
     color: #5f6469;
 
     font-size: 15px;
-
     line-height: 1.8;
 }
 
 .text-link {
     display: inline-flex;
     align-items: center;
-
     gap: 15px;
 
     margin-top: 15px;
@@ -749,7 +705,7 @@ button {
 
 
 /* =========================================================
-   ATTORNEYS HOMEPAGE SECTION
+   HOMEPAGE ATTORNEYS
    ========================================================= */
 
 .attorneys-section {
@@ -805,6 +761,7 @@ button {
     object-fit: cover;
     object-position: center top;
 
+    /* HOMEPAGE PHOTOS START BLACK AND WHITE */
     filter: grayscale(100%);
 
     transition:
@@ -815,12 +772,12 @@ button {
 .attorney-card:hover .attorney-image img {
     transform: scale(1.045);
 
+    /* HOMEPAGE PHOTOS TURN MOSTLY COLOR ON HOVER */
     filter: grayscale(20%);
 }
 
 .attorney-image-overlay {
     position: absolute;
-
     inset: 0;
 
     background:
@@ -871,7 +828,6 @@ button {
 .attorney-info a {
     display: inline-flex;
     align-items: center;
-
     gap: 12px;
 
     margin-top: 24px;
@@ -896,7 +852,7 @@ button {
 
 
 /* =========================================================
-   PRACTICE / SERVICES SECTION
+   PRACTICE AREAS
    ========================================================= */
 
 .practice-section {
@@ -925,13 +881,12 @@ button {
     color: var(--gray);
 
     font-size: 16px;
-
     line-height: 1.8;
 }
 
 
 /* =========================================================
-   SIX SERVICE CARDS
+   SERVICE CARDS
    ========================================================= */
 
 .services-grid {
@@ -1004,7 +959,6 @@ button {
 
 .service-card:hover .service-icon {
     background: var(--gold);
-
     color: var(--navy);
 
     transform: scale(1.08);
@@ -1052,7 +1006,6 @@ button {
 .service-card a {
     display: flex;
     align-items: center;
-
     gap: 12px;
 
     margin-top: auto;
@@ -1079,7 +1032,7 @@ button {
 
 
 /* =========================================================
-   STATEMENT SECTION
+   STATEMENT
    ========================================================= */
 
 .statement-section {
@@ -1097,7 +1050,6 @@ button {
 
 .statement-background {
     position: absolute;
-
     inset: 0;
 
     background:
@@ -1154,7 +1106,7 @@ button {
 
 
 /* =========================================================
-   CONTACT SECTION
+   CONTACT
    ========================================================= */
 
 .contact-section {
@@ -1279,7 +1231,6 @@ footer {
 .footer-logo {
     display: flex;
     align-items: center;
-
     gap: 18px;
 
     font-size: 13px;
@@ -1358,7 +1309,7 @@ footer {
 
 
 /* =========================================================
-   SCROLL REVEAL ANIMATIONS
+   SCROLL ANIMATIONS
    ========================================================= */
 
 .reveal {
@@ -1414,7 +1365,6 @@ footer {
 .back-link {
     display: flex;
     align-items: center;
-
     gap: 10px;
 
     color: rgba(255, 255, 255, 0.7);
@@ -1437,25 +1387,50 @@ footer {
 
 
 /* =========================================================
-   ATTORNEY PROFILE PAGE
+   ATTORNEY BIO PAGE
+   DESKTOP VERSION
    ========================================================= */
 
 .attorney-profile {
     background: var(--cream);
 }
 
+
+/*
+   This is intentionally NOT full-screen on desktop.
+   Keeps the attorney photo from becoming enormous.
+*/
+
 .profile-hero {
-    min-height: calc(100vh - 88px);
+    width: min(1250px, 90vw);
+
+    margin: 60px auto 80px;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.85fr 1.15fr;
+
+    align-items: stretch;
+
+    min-height: 0;
+
+    background: white;
+
+    box-shadow:
+        0 20px 60px rgba(16, 24, 32, 0.08);
 }
+
+
+/* =========================================================
+   BIO PAGE PHOTO
+   ALWAYS IN FULL COLOR
+   ========================================================= */
 
 .profile-photo {
     position: relative;
 
-    min-height: 720px;
+    height: 580px;
+    min-height: 0;
 
     overflow: hidden;
 
@@ -1466,7 +1441,6 @@ footer {
     content: "";
 
     position: absolute;
-
     inset: 0;
 
     pointer-events: none;
@@ -1474,7 +1448,7 @@ footer {
     background:
         linear-gradient(
             to top,
-            rgba(16, 24, 32, 0.12),
+            rgba(16, 24, 32, 0.08),
             transparent 35%
         );
 }
@@ -1486,31 +1460,42 @@ footer {
     object-fit: cover;
     object-position: center top;
 
-    filter: grayscale(100%);
+    /*
+       IMPORTANT:
+       Bio pictures are ALWAYS COLOR.
+    */
+    filter: none;
 
     transition:
-        filter 1s ease,
-        transform 1.3s cubic-bezier(.2, .7, .2, 1);
+        transform 0.8s cubic-bezier(.2, .7, .2, 1);
 }
 
 .profile-photo:hover img {
-    filter: grayscale(15%);
+    /*
+       Only a small zoom.
+       NO grayscale effect.
+    */
 
     transform: scale(1.02);
 }
+
+
+/* =========================================================
+   BIO PAGE CONTENT
+   ========================================================= */
 
 .profile-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    padding: 100px 8vw;
+    padding: 60px 70px;
 
-    background: var(--cream);
+    background: white;
 }
 
 .profile-eyebrow {
-    margin-bottom: 28px;
+    margin-bottom: 22px;
 
     color: var(--gold);
 
@@ -1525,11 +1510,11 @@ footer {
 .profile-content h1 {
     font-family: 'Libre Caslon Display', serif;
 
-    font-size: clamp(65px, 7vw, 110px);
+    font-size: clamp(56px, 5.5vw, 86px);
 
-    line-height: 0.9;
+    line-height: 0.92;
 
-    letter-spacing: -4px;
+    letter-spacing: -3px;
 
     font-weight: 400;
 
@@ -1543,7 +1528,7 @@ footer {
 }
 
 .profile-title {
-    margin-top: 24px;
+    margin-top: 18px;
 
     color: var(--gray);
 
@@ -1558,43 +1543,42 @@ footer {
     width: 100%;
     height: 1px;
 
-    margin: 40px 0;
+    margin: 30px 0;
 
     background: rgba(16, 24, 32, 0.14);
 }
 
 .profile-bio {
-    max-width: 600px;
+    max-width: 560px;
 
     margin-bottom: 18px;
 
     color: #60656a;
 
-    font-size: 16px;
+    font-size: 15px;
 
-    line-height: 1.85;
+    line-height: 1.75;
 }
 
 .profile-actions {
     display: flex;
     align-items: center;
-
     gap: 30px;
 
-    margin-top: 32px;
+    margin-top: 26px;
 }
 
 .profile-email {
     display: flex;
     align-items: center;
-
     gap: 9px;
 
     padding-bottom: 5px;
 
     color: var(--navy);
 
-    border-bottom: 1px solid rgba(16, 24, 32, 0.3);
+    border-bottom:
+        1px solid rgba(16, 24, 32, 0.3);
 
     font-size: 13px;
 
@@ -1611,129 +1595,11 @@ footer {
 
 
 /* =========================================================
-   ATTORNEY PROFILE PAGE - DESKTOP FIX
-   ========================================================= */
-
-.attorney-profile {
-    background: var(--cream);
-}
-
-.profile-hero {
-    width: min(1250px, 90vw);
-
-    margin: 60px auto 80px;
-
-    display: grid;
-
-    grid-template-columns: 0.85fr 1.15fr;
-
-    align-items: stretch;
-
-    min-height: auto;
-
-    background: white;
-
-    box-shadow: 0 20px 60px rgba(16, 24, 32, 0.08);
-}
-
-.profile-photo {
-    position: relative;
-
-    min-height: 0;
-
-    height: 620px;
-
-    overflow: hidden;
-
-    background: #d9d7d2;
-}
-
-.profile-photo::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(16, 24, 32, 0.10),
-            transparent 35%
-        );
-}
-
-.profile-photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center top;
-
-    filter: grayscale(100%);
-
-    transition:
-        filter 1s ease,
-        transform 1.3s cubic-bezier(.2, .7, .2, 1);
-}
-
-.profile-photo:hover img {
-    filter: grayscale(15%);
-
-    transform: scale(1.02);
-}
-
-.profile-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 65px 70px;
-
-    background: white;
-}
-
-.profile-eyebrow {
-    margin-bottom: 22px;
-}
-
-.profile-content h1 {
-    font-size: clamp(56px, 5.5vw, 86px);
-
-    line-height: 0.92;
-
-    letter-spacing: -3px;
-}
-
-.profile-title {
-    margin-top: 18px;
-}
-
-.profile-divider {
-    margin: 30px 0;
-}
-
-.profile-bio {
-    max-width: 560px;
-
-    font-size: 15px;
-
-    line-height: 1.75;
-}
-
-.profile-actions {
-    margin-top: 26px;
-}
-
-
-/* =========================================================
-   ATTORNEY PROFILE CONTACT SECTION
+   BIO PAGE CONTACT SECTION
    ========================================================= */
 
 .profile-contact-section {
-    padding: 120px 6vw;
+    padding: 100px 6vw;
 
     background: var(--navy);
 
@@ -1741,7 +1607,7 @@ footer {
 }
 
 .profile-contact-inner {
-    width: min(1300px, 100%);
+    width: min(1250px, 100%);
 
     margin: auto;
 
@@ -1833,7 +1699,8 @@ footer {
 
     padding-top: 22px;
 
-    border-top: 1px solid rgba(16, 24, 32, 0.15);
+    border-top:
+        1px solid rgba(16, 24, 32, 0.15);
 
     color: var(--gold);
 
@@ -1908,24 +1775,28 @@ footer {
     .footer-main {
         grid-template-columns: 1fr 1fr;
     }
-
 }
 
 
 /* =========================================================
-   ATTORNEY PROFILE TABLET
+   BIO PAGE TABLET
    ========================================================= */
 
 @media (max-width: 850px) {
 
     .profile-hero {
+        width: 100%;
+
+        margin: 0;
+
         grid-template-columns: 1fr;
+
+        box-shadow: none;
     }
 
     .profile-photo {
-        min-height: 600px;
-
-        height: 72vh;
+        height: 620px;
+        min-height: 0;
     }
 
     .profile-content {
@@ -1937,7 +1808,6 @@ footer {
 
         gap: 55px;
     }
-
 }
 
 
@@ -1987,7 +1857,8 @@ footer {
     }
 
     .hero h1 {
-        font-size: clamp(48px, 14vw, 68px);
+        font-size:
+            clamp(48px, 14vw, 68px);
 
         letter-spacing: -2px;
     }
@@ -2088,12 +1959,11 @@ footer {
 
         gap: 12px;
     }
-
 }
 
 
 /* =========================================================
-   ATTORNEY PROFILE MOBILE
+   BIO PAGE MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
@@ -2116,10 +1986,26 @@ footer {
         font-size: 10px;
     }
 
-    .profile-photo {
-        min-height: 480px;
+    /*
+       Mobile photo stays tall enough
+       to look good, but doesn't become
+       ridiculously huge.
+    */
 
-        height: 62vh;
+    .profile-photo {
+        height: 520px;
+
+        min-height: 0;
+    }
+
+    .profile-photo img {
+        /*
+           Still full color on mobile.
+        */
+
+        filter: none;
+
+        object-position: center top;
     }
 
     .profile-content {
@@ -2163,7 +2049,6 @@ footer {
     .profile-contact-card > a:first-of-type {
         font-size: 38px;
     }
-
 }
 
 
@@ -2193,6 +2078,10 @@ footer {
         font-size: 34px;
     }
 
+    .profile-photo {
+        height: 460px;
+    }
+
     .profile-content h1 {
         font-size: 59px;
     }
@@ -2200,12 +2089,11 @@ footer {
     .profile-contact-card > a:first-of-type {
         font-size: 33px;
     }
-
 }
 
 
 /* =========================================================
-   ACCESSIBILITY / REDUCED MOTION
+   REDUCED MOTION / ACCESSIBILITY
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2230,5 +2118,4 @@ footer {
 
         transform: none;
     }
-
 }
