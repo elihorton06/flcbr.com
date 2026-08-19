@@ -1611,6 +1611,124 @@ footer {
 
 
 /* =========================================================
+   ATTORNEY PROFILE PAGE - DESKTOP FIX
+   ========================================================= */
+
+.attorney-profile {
+    background: var(--cream);
+}
+
+.profile-hero {
+    width: min(1250px, 90vw);
+
+    margin: 60px auto 80px;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    align-items: stretch;
+
+    min-height: auto;
+
+    background: white;
+
+    box-shadow: 0 20px 60px rgba(16, 24, 32, 0.08);
+}
+
+.profile-photo {
+    position: relative;
+
+    min-height: 0;
+
+    height: 620px;
+
+    overflow: hidden;
+
+    background: #d9d7d2;
+}
+
+.profile-photo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(16, 24, 32, 0.10),
+            transparent 35%
+        );
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter 1s ease,
+        transform 1.3s cubic-bezier(.2, .7, .2, 1);
+}
+
+.profile-photo:hover img {
+    filter: grayscale(15%);
+
+    transform: scale(1.02);
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 65px 70px;
+
+    background: white;
+}
+
+.profile-eyebrow {
+    margin-bottom: 22px;
+}
+
+.profile-content h1 {
+    font-size: clamp(56px, 5.5vw, 86px);
+
+    line-height: 0.92;
+
+    letter-spacing: -3px;
+}
+
+.profile-title {
+    margin-top: 18px;
+}
+
+.profile-divider {
+    margin: 30px 0;
+}
+
+.profile-bio {
+    max-width: 560px;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+.profile-actions {
+    margin-top: 26px;
+}
+
+
+/* =========================================================
    ATTORNEY PROFILE CONTACT SECTION
    ========================================================= */
 
