@@ -385,3 +385,19 @@ phoneLinks.forEach((link) => {
 // =========================================================
 
 document.documentElement.classList.add("js-loaded");
+
+// Make entire attorney cards clickable
+document.querySelectorAll('.attorney-card').forEach(card => {
+    const profileLink = card.querySelector('.attorney-info a');
+
+    if (profileLink) {
+        card.style.cursor = 'pointer';
+
+        card.addEventListener('click', function(event) {
+            // Prevent double handling if they clicked the existing link
+            if (event.target.closest('a')) return;
+
+            window.location.href = profileLink.href;
+        });
+    }
+});
